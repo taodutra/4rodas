@@ -1,0 +1,845 @@
+/*
+Theme Name: 4rodas Menu
+Theme URI: http://www.4rodas.local/
+Author: Thiago Dutra
+Author URI: http://www.4rodas.local/
+Description: Menu responsivo em tema WP
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: red, black, white
+Text Domain: 4rodas
+*/
+
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    border:0;
+
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 0px;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+*:before, *:after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+ul{
+	list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+input, textarea, button{
+	outline: none;
+}
+
+textarea{
+	resize: none;
+}
+
+
+body{
+	background: #e6e6e6;
+
+    min-height: 100%;
+    outline: 0;
+    word-wrap: break-word;
+
+    font-family: 'Asap',sans-serif;
+    font-weight: 400;
+    font-size: 62.5%;
+    color: #222;
+}
+
+/* container */
+
+.container{
+	max-width: 1320px;
+	margin: 0 auto;
+}
+
+.container:before, .container:after {
+    content: " ";
+    display: table;
+}
+
+/* header */
+
+.header-quatrorodas{
+	background: #ed1c24;
+	width: 100%;
+	position: relative;
+}
+
+
+/* base usada do que há no ar, pelas tags de ads */
+/* faixa-publicidade */
+
+.faixa-publicidade{
+    /*height: 110px;*/
+    background: #e6e6e6;
+    margin: 0 0 4px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.TopAd{
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    background-color: "";
+    height: auto;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    position: relative;
+}
+
+#abrAD_leaderboard1 iframe,
+#abrAD_leaderboard1 img{
+    border: 0px;
+    vertical-align: bottom;
+}
+#abrAD_leaderboard1 img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+
+/* não há variações intermediárias para o menu - assim, menor do que o conteúdo padrão, adaptei a versão do menu para mobile */
+
+/* início para mobile - pode-se iniciar com 320px também */
+@media screen and (min-width:100px){
+	
+	.faixa-publicidade{
+	    height: 49px;
+	    position: fixed;
+	    left: 0;
+	    top: 0;
+	}
+	#abrAD_leaderboard1{
+	    margin: 6px 10px;
+	}
+
+	#abrAD_leaderboard1 img{
+		width: 300px;
+	}
+
+
+	.header-logo{
+		margin: 0 auto;
+		padding: 12px 0;
+
+		display: block;
+
+		width: 100%;
+		text-align: center;
+	}
+
+	.header-logo img{
+		width: 150px;
+		height: auto;
+		display: inline-block;
+	}
+
+	.header-quatrorodas .redes-sociais,
+	.header-quatrorodas .assine,
+	.header-quatrorodas .mais-acessados{
+		display: none;
+	}
+
+	.header-quatrorodas{
+		position: fixed;
+		left: 0;
+		top: 49px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li{
+		border-bottom: 1px solid #c21c1c;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > a{
+		font-size: 1.8em;
+		text-transform: uppercase;
+		color: #fff;
+		font-family: 'Dosis';
+		font-weight: 600;
+		position: relative;
+
+		width: 100%;
+		display: block;
+
+		line-height: 48px;
+		height: 48px;
+
+		padding-left: 20px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > a:after{
+	    position: absolute;
+	    top: 20px;
+	    right: 7px;
+	    width: 0;
+	    height: 0;
+	    color: white;
+	    content: '❯';
+	    transform: rotate(90deg);
+	    -moz-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	    -webkit-transform: rotate(90deg);
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.menu-tabela-fipe > a:after,
+	.header-quatrorodas .menu-principal > ul > li.menu-assine > a:after{
+		content: '';
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.active{
+		background: #242424;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.active > a:after{
+		transform: rotate(-90deg);
+	    -moz-transform: rotate(-90deg);
+	    -ms-transform: rotate(-90deg);
+	    -webkit-transform: rotate(-90deg);
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav{
+		display: none;
+	}
+
+	.header-quatrorodas > form{
+		display: none;
+	}
+
+	
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista,
+	.header-quatrorodas .menu-principal > ul > li > nav .modelos-az{
+		padding: 20px 20px 20px 40px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista a,
+	.header-quatrorodas .menu-principal > ul > li > nav .modelos-az a{
+		font-size: 1.6em;
+		line-height: 20px;
+		color: #fff;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista-single{
+		padding-bottom: 0;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav .modelos-az{
+		padding-top: 0;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav.menu-imagens > div{
+		display: none;
+	}
+
+	/* exemplo de conteúdo, como está no layout */
+
+	.main .content-mobile{
+		display: block;
+
+		width: auto;
+		height: auto;
+		max-width: 100%;
+
+		margin: 111px auto 50px;
+	}
+
+	.main .content-desk{
+		display: none;
+	}
+
+}
+
+/* evitando */
+
+@media screen and (max-width:1319px){
+
+	.header-quatrorodas .menu-principal{
+
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+
+		background: #d41f1f;
+	}
+
+	.header-quatrorodas .menu-principal.menu-active{
+		display: block;
+	}
+
+	.menu-button{
+		display: block;
+		position: absolute;
+		z-index: 200;
+		top: 0;
+		right: 0;
+
+		width: 62px;
+		height: 62px;
+	}
+
+	.menu-button.menu-active{
+		background: #d41f1f;
+	}
+
+	.menu-button span{
+		display: block;
+		height: 4px;
+		width: 20px;
+		background: #fff;
+
+		border-radius: 2px;
+
+		position: absolute;
+
+		left: 21px;
+
+		opacity: 1;
+
+		transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+
+    -webkit-transition: all 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+       -moz-transition: all 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        -ms-transition: all 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+         -o-transition: all 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+            transition: all 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+-webkit-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+   -moz-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+     -o-transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940); 
+        transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+	}
+
+	.menu-button span:nth-child(1){
+		top: 23px;
+	}
+
+	.menu-button span:nth-child(2){
+		top: 29px;
+	}
+
+	.menu-button span:nth-child(3){
+		top: 35px;
+	}
+
+	.menu-button.menu-active span:nth-child(1){
+		transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		top: 29px;
+
+		border-radius: 0;
+	}
+
+	.menu-button.menu-active span:nth-child(2){
+		width: 4px;
+		opacity: 0;
+		left: 29px;
+	}
+
+	.menu-button.menu-active span:nth-child(3){
+		transform: rotate(45deg);
+		-moz-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		top: 29px;
+
+		border-radius: 0;
+	}
+}
+
+@media screen and (min-width:500px){
+
+	/* exemplo de conteúdo, como está no layout */
+
+	/*.main{
+		padding-top: 35px;
+	}*/
+
+	.main .content-mobile{
+		display: none;
+	}
+
+	.main .content-desk{
+		display: block;
+
+		width: auto;
+		height: auto;
+		max-width: 100%;
+		margin: 111px 0 50px;
+	}
+
+}
+
+/* início para a versão completa */
+@media screen and (min-width:1320px){
+	
+	.faixa-publicidade{
+	    height: 110px;
+	    position: relative;
+	}
+	#abrAD_leaderboard1{
+	    margin: 11px 10px;
+	}
+	#abrAD_leaderboard1 img{
+		width: auto;
+	}
+
+	.header-quatrorodas{
+		height: 80px;
+		position: relative;
+		top: 0;
+	}
+
+	.header-logo{
+		margin: 0;
+		padding: 19px 19px 18px;
+
+		display: inline-block;
+		float: left;
+
+		width: auto;
+		text-align: left;
+	}
+
+	.header-logo a{
+		display: block;
+	}
+
+	.header-logo img{
+		width: auto;
+		display: block;
+	}
+
+	.header-quatrorodas .menu-principal{
+		float: left;
+		margin-right: 5px;
+		visibility: visible;
+	}
+
+	.header-quatrorodas .menu-principal > ul{
+		float: left;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li{
+		float: left;
+		border-bottom: 0;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > a{
+		font-size: 1.4em;
+		display: block;
+		height: 80px;
+		line-height: 80px;
+
+		padding: 0 25px 0 15px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > a:after{
+	    top: 36px;
+	    right: -27px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > a:hover{
+		background: #242424;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.menu-tabela-fipe > a,
+	.header-quatrorodas .menu-principal > ul > li.menu-assine > a{
+		padding: 0 17px 0 15px;
+	}
+
+
+	/* fiz algumas mudanças nas dimensões dos submenus para que aceitasse todos os exemplos, inclusive os que não constavam no layout */
+
+	.header-quatrorodas .menu-principal > ul > li > nav{
+		display: none;
+		position: absolute;
+		z-index: 3;
+
+		width: 1320px;
+
+		left: 0;
+		top: 100%;
+
+		color: #fff;
+
+		background: #242424;
+
+		border-bottom: 2px solid #ed1c24;
+
+		height: 230px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.menu-carros > nav{
+		height: 172px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.menu-carros > nav .modelos-az{
+		padding: 0;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.menu-carros > nav .modelos-az ul{
+		width: 1110px;
+		float: left;
+		padding-top: 18px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.menu-carros > nav .modelos-az ul li{
+		float: left;
+		width: 20%;
+		height: 35px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li.menu-carros > nav .modelos-az ul li a{
+		display: block;
+		padding: 0 20px 0 40px;
+		width: 100%;
+		height: 35px;
+		line-height: 35px;
+
+		font-size: 1.5em;
+		font-weight: 400;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav.menu-imagens > div{
+		width: 1090px;
+		float: left;
+		display: inline-block;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav.menu-imagens > div > ul{
+		padding: 25px 10px 0 20px;
+		width: 100%;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav.menu-imagens > div > ul > li{
+		width: 20%;
+		float: left;
+		padding: 0 10px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav.menu-imagens > div > ul > li img{
+		width: auto;
+		height: auto;
+		max-width: 100%;
+
+		display: block;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav.menu-imagens > div > ul > li p{
+		padding-top: 10px;
+		font-size: 1.4em;
+		line-height: 18px;
+		font-weight: 400;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista{
+		height: 100%;
+		display: inline-block;
+		float: left;
+		background: #474747;
+
+		width: 230px;
+
+		padding: 20px 0 0 !important;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista li{
+		width: 100%;
+		height: 33px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista li a{
+		padding-right: 20px;
+		text-align: right;
+
+		font-size: 1.5em;
+		display: block;
+		width: 100%;
+		height: 33px;
+
+		line-height: 33px;
+
+		position: relative;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista li.is_active a,
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista li a:hover{
+		background: #242424;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista li.is_active a:after,
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista li a:hover:after{
+		position: absolute;
+        top: 1px;
+	    right: 14px;
+	    width: 0;
+	    height: 0;
+	    color: white;
+	    content: '❯';
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista.lista-single{
+		background: transparent;
+		width: 210px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista.lista-single li a:after{
+		display: none !important;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista.lista-single li{
+		padding-left: 15px;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li > nav ul.lista.lista-single li a{
+		background: #474747;
+		text-align: center;
+		padding: 0;
+	}
+
+
+
+	.header-quatrorodas .menu-principal > ul > li:hover > nav{
+		display: block;
+	}
+
+	.header-quatrorodas .menu-principal > ul > li:hover >a{
+		background: #242424;
+	}
+
+	.header-quatrorodas > form{
+		display: inline-block;
+		float: left;
+
+		height: 33px;
+		width: 132px;
+		position: relative;
+
+		top: 24px;
+
+		background: #fff;
+	}
+
+	/* é o único lugar onde a Helvetica é usado. pareceu ser sem intenção, como no item principal do menu - GUIA DE COMPRAS - assim, optei por deixar a fonte padrão usada */
+	.header-quatrorodas > form .qu{
+		width: 100%;
+		height: 100%;
+
+		background-color: transparent;
+
+		line-height: 33px;
+
+		font-size: 1.2em;
+
+		padding-left: 13px;
+		padding-right: 30px;
+	}
+
+	.header-quatrorodas > form .qu_btn{
+		background: transparent;
+
+		height: 33px;
+		font-size: 1.4em;
+
+		color: #a3a3a3;
+
+		position: absolute;
+
+		right: 0;
+		top: 0;
+	}
+
+	.header-quatrorodas .redes-sociais{
+		display: inline-block;
+		float: left;
+		padding-top: 30px;
+		padding-left: 13px;
+
+		height: 0px;
+		overflow: hidden;
+	}
+
+	.header-quatrorodas .redes-sociais li{
+		float: left;
+		padding-right: 21px;
+	}
+
+	.header-quatrorodas .redes-sociais li:last-child{
+		padding-right: 8px;
+	}
+
+	.header-quatrorodas .redes-sociais li a{
+		display: block;
+		color: #fff;
+		font-size: 2.1em;
+	}
+	.header-quatrorodas .redes-sociais li a.icon-logo-abril-single{
+		width: 19px;
+		height: 21px;
+		background: url('img/logo-abril.png') no-repeat 0 0;
+	}
+
+	.header-quatrorodas .redes-sociais li a:hover{
+		opacity: 0.9;
+	}
+
+	.header-quatrorodas .assine{
+		display: inline-block;
+		float: left;
+		padding-top: 23px;
+		padding-left: 10px;
+
+		height: 0px;
+		overflow: hidden;
+	}
+
+	.header-quatrorodas .assine img{
+		display: block;
+	}
+
+	.header-quatrorodas .mais-acessados{
+		display: block;
+		position: absolute;
+		z-index: 2;
+		top: 100%;
+
+		background: #242424;
+
+		color: #fff;
+
+		width: 100%;
+		height: 28px;
+		line-height: 28px;
+
+		text-transform: uppercase;
+
+		font-family: 'Dosis';
+		font-weight: 600;
+		/*mais-acessados.png*/
+	}
+
+	.header-quatrorodas .mais-acessados:before{
+		display: inline-block;
+		content: '+ ACESSADOS';
+		float: left;
+
+		width: 140px;
+
+		background: #d41f1f url('img/mais-acessados.png') no-repeat 100% 0;
+
+		padding-left: 20px;
+
+		font-size: 1.4em;
+	}
+
+	.header-quatrorodas .mais-acessados ul{
+		float: left;
+	}
+
+	.header-quatrorodas .mais-acessados ul li{
+		float: left;
+		padding-left: 35px;
+	}
+	.header-quatrorodas .mais-acessados ul li a{
+		font-size: 1.2em;
+	}
+	.header-quatrorodas .mais-acessados ul li a:hover{
+		text-decoration: underline;
+	}
+
+	.main{
+		padding-top: 35px;
+	}
+	.main .content-desk{
+		margin-top: 0;
+	}
+
+	body.menu-fixed .faixa-publicidade{
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	body.menu-fixed .header-quatrorodas{
+		height: 60px;
+		position: fixed;
+		z-index: 2001;
+		width: 1320px;
+
+		top: 110px;
+		left: 50%;
+		margin-left: -660px;
+	}
+
+	body.menu-fixed .main{
+		margin-top: 193px;
+	}
+
+	body.menu-fixed .header-quatrorodas .mais-acessados{
+		display: none;
+	}
+
+	body.menu-fixed .header-quatrorodas > form{
+		top: 14px;
+	}
+
+	body.menu-fixed .header-quatrorodas .redes-sociais{
+		padding-top: 20px;
+		height: auto;
+	}
+
+	body.menu-fixed .header-quatrorodas .menu-principal > ul > li > a{
+		height: 60px;
+		line-height: 60px;
+	}
+
+	body.menu-fixed .header-quatrorodas .menu-principal > ul > li > a:after{
+		top: 26px;
+		right: -17px;
+	}
+
+	body.menu-fixed .header-logo{
+		margin: 0;
+		padding: 9px 19px 8px;
+	}
+
+	body.menu-fixed .header-quatrorodas .assine{
+		height: auto;
+		padding-top: 13px;
+	}
+
+}
