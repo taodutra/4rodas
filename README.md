@@ -1,6 +1,6 @@
 # Layout 4rodas - WP
 
-Menu responsivo de **$rodas** aplicado em tema base WP.
+Menu responsivo de **4rodas** aplicado em tema base WP.
 
 ### Banco de dados
 
